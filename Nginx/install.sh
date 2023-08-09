@@ -9,8 +9,8 @@ sudo systemctl start docker
 sudo systemctl enable docker
 mkdir docker
 cd docker
-curl https://raw.githubusercontent.com/bembenk18/Magang/main/Nginx/Dockerfile > Dockerfile
-curl https://raw.githubusercontent.com/bembenk18/Magang/main/Nginx/nginx.conf > nginx.conf
+curl https://raw.githubusercontent.com/bembenk18/Magang/main/Nginx/docker/Dockerfile > Dockerfile
+curl https://raw.githubusercontent.com/bembenk18/Magang/main/Nginx/docker/nginx.conf > nginx.conf
 docker build -t nginx-multiserver .
 docker run -d -p 8081:8081 -p 8082:8082 -p 8083:8083 nginx-multiserver
 
